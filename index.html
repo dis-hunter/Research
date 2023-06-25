@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Health Service Utilization</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #99acb145;
+      text-align: center;
+    }
+    
+    h1 {
+      background-color: #42c9be;
+    background-image: url("hsatisfaction.jpg");
+    background-blend-mode: multiply;
+      color: #080c01;
+      
+      padding-top: 200px;
+      padding-bottom: 200px;
+      font-family: Arial, sans-serif;
+    }
+    
+    
+    #topic-buttons {
+      display: ruby;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .topic-button {
+      background-color: #12beb0;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: ruby;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+    }
+    
+    .topic-button:hover {
+      background-color: #5F9EA0;
+      font-size: larger;
+    }
+    
+    
+    #info {
+      color: #333333;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Health Service Utilization</h1>
+
+  
+  <div id="topic-buttons">
+    <button class="topic-button" id="perspective-btn">Perspective</button>
+    <button class="topic-button" id="experiences-btn">Experiences</button>
+    <button class="topic-button" id="family-distress-btn">Family Distress</button>
+    <button class="topic-button" id="satisfaction-btn">Satisfaction</button>
+  </div>
+  
+  <p id="info">Select a topic to view additional information.</p>
+  
+  <script>
+    // Get the topic buttons and info element
+    const perspectiveBtn = document.getElementById("perspective-btn");
+    const experiencesBtn = document.getElementById("experiences-btn");
+    const familyDistressBtn = document.getElementById("family-distress-btn");
+    const satisfactionBtn = document.getElementById("satisfaction-btn");
+    const infoElement = document.getElementById("info");
+    
+    // Add event listeners to the buttons
+    perspectiveBtn.addEventListener("click", function() {
+      infoElement.innerText= "Causes unknown\nTherapies don't work\nCan't control illness\n";
+    });
+    
+    experiencesBtn.addEventListener("click", function() {
+      infoElement.innerText = "Communication with providers.\nPoor management of disruptive behaviour.\nOverwhelming physical environments."
+    });
+    
+    familyDistressBtn.addEventListener("click", function() {
+      infoElement.innerText = "Moderate distress levels (3.3/10)\nWorser with poor child functioning.";
+    });
+    satisfactionBtn.addEventListener("click", function() {
+      infoElement.innerText = "Good communication and technical qualitiy\nPoor interpersonal manner.\nInconvenience/Inaccesible.\nPoor financial status.";
+    });
+  </script>
+</body>
+</html>
